@@ -29,14 +29,14 @@ h2 {
 }
 
 h3 {
-  font-size: 2.3rem;
+  font-size: 1.5rem;
 }
 
 h4 {
   font-size: 1.25rem;
 }
 
-
+p,
 figcaption,
 button,
 a {
@@ -157,122 +157,197 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
-  margin: 50px auto;
-  gap: 10px;
-}
-
-.first-all {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 100px;
-  flex-direction: row-reverse;
+  gap: 50px;
+  margin: 40px;
+  padding-top: 100px;
+  width: 100%;
+}
+
+.first {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   max-width: 100%;
-  padding: 50px 50px 50px 50px;
 }
 
-.first-all img {
-  width: 30%;
-  height: auto;
-  margin: 50px;
-  padding: 10pX;
-  max-width: 50%;
+#fpn {
+  width: 70vw;
+  height: 60vh;
+  align-items: flex-start;
+  display: flex;
+
 }
 
+.second {
 
-.first-all p {
-  margin: 0;
-  font-size: 1.9rem;
-  line-height: 1.5;
-  max-width: 50%;
-  text-align: justify;
+  background-color: #fafafa;
+  width: 100%;
+
 }
-
-
-/*first*/
-
 
 .second-all {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-  max-width: 100%;
-  padding: 50px 50px 50px 50px;
-}
-
-.second-all img {
-  width: 30%;
-  height: auto;
-  margin: 50px;
-  max-width: 50%;
-}
-
-.second-all p {
-  margin: 0;
-  font-size: 1.9rem;
-  line-height: 1.5;
-  max-width: 50%;
-  text-align: justify;
-}
-
-/*section 3*/
-.third {
-  display: flex;
   flex-direction: row;
+  padding: 50px 10%;
+  display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+}
+
+#spn {
+  width: 20%;
+  border-radius: 20px;
+  margin: 60px;
+}
+
+.sect {
+  margin-bottom: 15px;
+}
+
+#thf1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #056902;
+}
+
+#sec-text {
+  font-size: 20px;
+  line-height: 2rem;
+  text-align: justify;
+  width: 450px;
+}
+
+.second-all button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #11722e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.second-all button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.second-all button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.second-all button:hover span {
+  padding-right: 15px;
+}
+
+.second-all button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.image img {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 10%;
+}
+
+.phone img {
+  max-width: 220px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 450px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  background-color: #2e7d32;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+
+
+/* ========== SEÇÃO FOURTH (BENEFÍCIOS) - MODIFICADA PARA ALINHAMENTO HORIZONTAL ========== */
+
+.fourth {
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 200px; 
   padding: 50px 20px;
-
+  background-color: #fafafa;
+  flex-wrap: wrap; 
+  width: 100%;
 }
 
-.Cel img {
+.fourth-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* imagem em cima, texto embaixo */
   align-items: center;
-  justify-content: center;
-  width: 20vw;
-  height: 55vh;
-
+  text-align: center;
+  width: 400px; /* cada bloco tem largura fixa */
+  gap: 15px; /* espaço entre imagem e texto */
 }
 
-ul {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  margin: 0;
-  max-width: 100%;
+.fourth-item img.fourth-img {
+  width: 100%; /* imagem ocupa largura do bloco */
+  height: auto;
+  object-fit: contain;
 }
 
-ul li {
-  gap: 150px
+.fourth-item p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5rem;
 }
-
-.title-container {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  
-
-}
-
-.pli {
-  font-size: 1.9rem !important;
-}
-
-
-
-
-
-
-
 
 
 
@@ -290,9 +365,9 @@ ul li {
 #rodape {
   background-color: #2e9a60;
   color: #fff;
+  width: 100%;
   padding: 40px 20px;
   text-align: center;
-
 }
 
 .rodape-logo {
@@ -313,4 +388,27 @@ ul li {
 
 .links-rodape a:hover {
   text-decoration: underline;
+}
+
+/* Media Query para responsividade em telas menores */
+@media (max-width: 768px) {
+  .list-fourth {
+    flex-direction: column;
+    /* Em telas pequenas, volta a ser vertical */
+    gap: 40px;
+  }
+
+  .second-all {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  #spn {
+    width: 50%;
+    margin: 20px auto;
+  }
+
+  #sec-text {
+    width: 100%;
+  }
 }

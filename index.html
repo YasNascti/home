@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodPay</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="imagem/png" href="img/Logo.png">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <!-- Google Fonts extra para mais estilo -->
     <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
 
     <!-- AOS (Animate On Scroll) para animações ao rolar a página -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
@@ -41,8 +44,6 @@
                     </svg>
                 </button>
 
-
-
                 <button class="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" stroke-linejoin="round"
                         stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor"
@@ -51,28 +52,24 @@
                         <circle r="1" cy="21" cx="20"></circle>
                         <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                     </svg>
+                </button>
 
-                    <button class="button">
-                        <a href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em"
-                                viewBox="0 0 24 24" fill="currentColor" class="icon">
-                                <path
-                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1zm0-8c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1s1 .45 1 1v1c0 .55-.45 1-1 1z" />
-                            </svg></a>
-                    </button>
+                <button class="button">
+                    <a href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em"
+                            viewBox="0 0 24 24" fill="currentColor" class="icon">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1zm0-8c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1s1 .45 1 1v1c0 .55-.45 1-1 1z" />
+                        </svg></a>
+                </button>
 
-
-
-
-                    <button id="user-icon" class="button">
-                        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Usuário" />
-                    </button>
+                <button id="user-icon" class="button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Usuário" />
                 </button>
             </div>
         </div>
     </div>
 
     <!-- -------------------------- -->
-
 
     <div id="container">
         <hr id="linhadochuma">
@@ -81,93 +78,107 @@
                 alt="FoodPay logo with stylized utensils arranged in a circle suggesting community and sharing, set against a clean background with a welcoming and friendly tone"
                 id="img-menu">
         </div>
-        <!-- Imagem Principal -->
-        <div class="principal">
-            <section class="first">
-                <div class="first-all">
-                    <img src="first.png" id="fpn" alt="">
-                    <p id="first-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, maxime?
-                        dem tempora dolorem dolorum saepe vero eveniet repudiandae
-                        sapiente quo exercitationem perferendis ipsa?Lorem, ipsum dolor sit amet consectetur
-                        adipisicing elit. Id, maxime?
-                        psa?
-                    </p>
-                </div>
+    </div>
 
-            </section>
-            <div class="second">
-                <div class="second-all">
-                    <img src="sec.png" id="spn">
-                    <p id="sec-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, maxime?
-                        dem tempora dolorem dolorum saepe vero eveniet repudiandae
-                        sapiente quo exercitationem perferendis ipsa?Lorem, ipsum dolor sit amet consectetur
-                        adipisicing elit. Id, maxime?
-                        psa?</p>
+    <!-- Conteúdo Principal -->
+    <div class="principal">
+        <div class="first">
+            <img src="ter.jpg" id="fpn">
+        </div>
+
+        <div class="second">
+            <div class="second-all">
+                <img src="sec.png" id="spn">
+                <div class="sect">
+                    <p>
+                    <h1 id="thf1">Conheça nossa história</h1>
+                    </p>
+                    <p id="sec-text">O benefício digital e flexível para sua empresa. Mais praticidade para o RH e
+                        satisfação para os colaboradores.</p>
+                    <button>
+                        <span>Saiba Mais</span>
+                    </button>
                 </div>
             </div>
+        </div>
+        <!-- Lista de funcionalidades -->
+        <section class="features">
+            <div class="phone">
+                <img src="celular.png" alt="App FoodPay no celular">
+            </div>
 
-            <section class="third">
-
-                <!-- Card da imagem do celular -->
-                <div class="Cel">
-                    <img src="celular.png" alt="Celular">
+            <div class="info">
+                <div class="feature">
+                    <img src="circulo.png" alt="" srcset="">
+                    <div>
+                        <h3>Cadastro simples</h3>
+                        <p>Entrou, preencheu, tá dentro — rápido, fácil e sem complicação.</p>
+                    </div>
                 </div>
 
-                <!-- Lista de funcionalidades -->
-                <ul class="listv">
-                    <li class="li2">
-                        <div class="title-container">
-                            <img src="circulo.png" alt="ícone">
-                            <h3>Cadastro simples</h3>
-                        </div>
-                        <p class="pli">Entrou, preencheu, tá dentro — rápido, fácil e sem complicação.</p>
-                    </li>
-                    <li class="li2">
-                        <div class="title-container">
-                            <img src="circulo.png" alt="ícone">
-                            <h3>Segurança</h3>
-                        </div>
-                        <p class="pli">Seus dados estão sempre protegidos, com cuidado e tecnologia que mantêm tudo
-                            seguro.</p>
-                    </li>
-                    <li class="li2">
-                        <div class="title-container">
-                            <img src="circulo.png" alt="ícone">
-                            <h3>Cadastro Simplificado</h3>
-                        </div>
-                        <p class="pli">Seus dados estão sempre protegidos, com cuidado e tecnologia que mantêm tudo
-                            seguro. Para alunos de ETECs e FATECs: cadastro fácil e rápido.</p>
-                    </li>
-                </ul>
+                <div class="feature">
+                    <img src="circulo.png" alt="" srcset="">
+                    <div>
+                        <h3>Segurança</h3>
+                        <p>Seus dados estão sempre protegidos, com cuidado e tecnologia que mantém tudo seguro.</p>
+                    </div>
+                </div>
 
-            </section>
-            <section class="fourth"></section>
+                <div class="feature">
+                    <img src="circulo.png" alt="" srcset="">
+                    <div>
+                        <h3>Cadastro Simplificado</h3>
+                        <p>Seus dados estão sempre protegidos, com cuidado e tecnologia que mantém tudo seguro.
+                            Para alunos de ETECs e FATECs: cadastro fácil e rápido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="fourth">
+            <div class="fourth-item">
+                <img src="controle.png" alt="Controle" class="fourth-img">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab blanditiis,
+                    necessitatibus neque, iusto nostrum voluptatum in veniam ut officia,
+                    quos repudiandae.</p>
+            </div>
+
+            <div class="fourth-item">
+                <img src="gestores.png" alt="Gestores" class="fourth-img">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae et provident
+                    illum. Optio eaque quisquam error consequuntur omnis nisi incidunt temporibus vitae
+                    culpa?</p>
+            </div>
+
+            <div class="fourth-item">
+                <img src="tempo.png" alt="Tempo" class="fourth-img">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A atque excepturi eos
+                    dolorum cumque tempora quis suscipit eveniet neque distinctio numquam dolore.</p>
+            </div>
         </div>
 
 
 
-
-
-
-        <!-- Rodapé -->
-        <footer id="rodape">
-            <div class="rodape-conteudo">
-                <img src="logo.png" alt="Logo FoodPay" class="rodape-logo">
-                <p>&copy; 2025 FoodPay. Todos os direitos reservados.</p>
-                <div class="links-rodape">
-                    <a href="#">Política de Privacidade</a>
-                    <a href="#">Termos de Uso</a>
-                    <a href="#">Contato</a>
-                </div>
-            </div>
-        </footer>
+        <div>
+            <img src="ter.jpg" id="imgfim" alt="Imagem final">
+        </div>
     </div>
 
-    <!-- Script do AOS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+
+    <!-- Rodapé -->
+    <footer id="rodape">
+        <div class="rodape-conteudo">
+            <img src="logo.png" alt="Logo FoodPay" class="rodape-logo">
+            <p>&copy; 2025 FoodPay. Todos os direitos reservados.</p>
+            <div class="links-rodape">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+
 </body>
 
 </html>
