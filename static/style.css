@@ -1,3 +1,4 @@
+
 /* ========== Reset Global ========== */
 * {
   padding: 0;
@@ -73,7 +74,7 @@ body {
 #linhadochuma {
   height: 90px;
   width: 100%;
-  background-color: cc;
+  background-color: #11722e;
   position: fixed;
 }
 
@@ -164,7 +165,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 50px;
-
+  max-width: 100%;
   width: 100%;
 }
 
@@ -178,7 +179,6 @@ a:hover {
 #fpn {
   width: 110vw;
   height: 60vh;
-
   display: flex;
 
 }
@@ -419,7 +419,7 @@ HORIZONTAL ========== */
   /* antes era var(--card-bg) */
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  
+
   transition: all 0.3s ease;
   /* antes era var(--transition) */
 }
@@ -447,7 +447,7 @@ HORIZONTAL ========== */
   font-family: "Sansation", sans-serif;
   font-weight: 400;
   text-align: justify;
-  
+
   font-style: normal;
 
 
@@ -456,8 +456,21 @@ HORIZONTAL ========== */
   line-height: 1.6;
 }
 
+.imagemfim {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content:flex-end ;
+  align-items: flex-end;
+}
+
+#imgfim {
+  width: 100vw;
+  height: 70vh;
 
 
+
+}
 
 
 

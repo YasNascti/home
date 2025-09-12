@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-md fixed-top" id="navegacao">
+    <div class="container-fluid">
+        <!-- LOGO -->
+        <a class="navbar-brand" href="{{ url_for('home.home') }}">
+            <img src="{{ url_for('static', filename='images/home/Logo.png') }}" id="logo" alt="Logo">
+        </a>
+
+        <!-- BOTÃO HAMBURGUER -->
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list" style="font-size: 2rem;"></i>
+        </button>
+
+        <!-- LINKS DO MENU -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-4">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ url_for('home.home') }}">
+                        <!-- <i class="bi bi-house-door"></i> -->
+                        <p class="d-inline nav-p">Home</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ url_for('loja.loja') }}">
+                        <!-- <i class="bi bi-cart"></i> -->
+                        <p class="d-inline nav-p">Loja</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ url_for('info.sobre') }}">
+                        <!-- <i class="bi bi-info-circle"></i> -->
+                        <p class="d-inline nav-p">Sobre</p>
+                    </a>
+                </li>
+                {% if user_logado.nivel_conta == 1 %}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{ url_for('admin.admin') }}">
+                        <!-- <i class="bi bi-tools"></i> -->
+                        <p class="d-inline nav-p">Admin</p>
+                    </a>
+                </li>
+                {% endif %}
+
+                {% if user_logado %}
+                <li class="nav-item d-block d-md-none">
+                    <a class="nav-link text-white" href="{{ url_for('perfil.perfil') }}">
+                        <img src="{{ url_for('static', filename=(user_logado.imagem_usuario if user_logado else 'uploads/pfp/default.jpg')) }}"
+                            alt="Perfil" style="width: 42px; height: 42px; border-radius: 50%;">
+                        <p class="nav-p">Meu Perfil</p>
+                    </a>
+                </li>
+                {% else %}
+                <li class="nav-item d-block d-md-none text-center">
+                    <a href="{{ url_for('auth.login') }}" style="width: 150px !important;"
+                        class="btn btn-outline-light">Entrar</a>
+                </li>
+                <li class="nav-item d-block d-md-none text-center pb-4">
+                    <a href="{{ url_for('auth.login') }}#registrar" style="width: 150px !important;" class=" btn
+                        btn-outline-light">Registrar</a>
+                </li>
+                {% endif %}
+
+            </ul>
+        </div>
+
+        <div id="img-usuario-container">
+            {% if user_logado %}
+            {% if header_mode == 'perfil' %}
+            {% include 'shared/painel_notificacao.html' %}
+            {% else %}
+            <a href="{{ url_for('perfil.perfil') }}" id="user-icon">
+                <img class="{% if not user_logado.ultima_notificacao_vista %}notificacao_nova{% endif %}"
+                    src="{{ url_for('static', filename=(user_logado.imagem_usuario if user_logado else 'uploads/pfp/default.jpg')) }}">
+            </a>
+            {% endif %}
+            {% else %}
+            <div class="d-flex gap-2">
+                <a href="{{ url_for('auth.login') }}" class="btn btn-outline-light">Entrar</a>
+                <a href="{{ url_for('auth.login') }}#registrar" class="btn btn-outline-light">Registrar</a>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+</nav>
+
+<hr id="linhadochuma">

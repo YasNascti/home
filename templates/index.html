@@ -1,35 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodPay</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="imagem/png" href="img/Logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <!-- Google Fonts extra para mais estilo -->
-    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+    <title>Document</title>
 
-    <!-- AOS (Animate On Scroll) para animações ao rolar a página -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
     <!-- Barra de Navegação do Site -->
     <div id="navegacao">
-        <img src="logo.png" id="logo">
+        <img src="/templates/images/logo.png" id="logo">
         <div id="nav-buttons">
             <div class="button-container">
                 <button class="button">
@@ -99,12 +81,12 @@ background with a welcoming and friendly tone" id="img-menu">
     <!-- Conteúdo Principal -->
     <div class="principal">
         <div class="first">
-            <img src="ter.jpg" id="fpn">
+            <img src="images/FoodPay.jpg" id="fpn">
         </div>
-
+<div class="gap">
         <div class="second">
             <div class="second-all">
-                <img src="sec.png" id="spn">
+                <img src="images/Oque é FoodPay.jpg" id="spn">
                 <div class="sect">
                     <p>
                     <h1 id="thf1">Conheça nossa história</h1>
@@ -113,20 +95,45 @@ background with a welcoming and friendly tone" id="img-menu">
                         para sua empresa. Mais praticidade para o RH e
                         satisfação para os colaboradores.</p>
                     <button>
-                        <span>Saiba Mais</span>
+                        <span><a href="/Sobren/sobre/layout/index.html"> Saiba Mais</a></span>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Lista de funcionalidades -->
         <section class="features1">
-            <div class="phone">
-                <img src="celular.png" alt="App FoodPay no celular">
+            <!-- From Uiverse.io by Javierrocadev -->
+            <!-- From Uiverse.io by Rodrypaladin -->
+            <div class="allcardcel">
+                <div class="cardcel">
+                    <div class="btn1"></div>
+                    <div class="btn2"></div>
+                    <div class="btn3"></div>
+                    <div class="btn4"></div>
+
+                    <div class="card-int">
+                        <img src="/templates/images/logo.png" alt="Logo FoodPay" class="simcel">
+                        <div class="hello">
+                            foodpay
+                            <span class="hidden">Compre rápido, pague fácil</span>
+                        </div>
+                    </div>
+
+                    <div class="top">
+                        <div class="camera">
+                            <div class="int"></div>
+                        </div>
+                        <div class="speaker"></div>
+                    </div>
+                </div>
             </div>
+
+            <!-- fim cel  -->
+
             <div class="allcards-fat">
                 <div class="cards-list">
                     <div class="cardtitle">
-                        <img src="iconcadas.png" class="cadasicon" alt="">
+                        <img src="/templates/images/iconcadas.png" class="cadasicon" alt="">
                         <span class="title">Cadastro simples</span>
                     </div>
                     <p class="description">Entrou, preencheu, tá dentro — rápido,
@@ -134,14 +141,17 @@ background with a welcoming and friendly tone" id="img-menu">
 
                 </div>
                 <div class="cards-list">
-                    <div class="cardtitle"> <img src="dados-pessoais.png" class="cadasicon" alt=""><span
-                            class="title">Segurança</span></div>
+                    <div class="cardtitle">
+                        <img src="/templates/images/dados-pessoais.png" class="cadasicon" alt="">
+
+                        <span class="title">Segurança</span>
+                    </div>
                     <p class="description">Seus dados estão sempre protegidos, com
                         cuidado e tecnologia que mantém tudo seguro.</p>
 
                 </div>
                 <div class="cards-list">
-                    <div class="cardtitle"> <img src="exclusivo.png" alt="" class="cadasicon"> <span
+                    <div class="cardtitle"> <img src="/templates/images/exclusivo.png" alt="" class="cadasicon"> <span
                             class="title">Exclusividade</span></div>
                     <p class="description"> O sistema para facilitar sua vida, exclusivo
                         para alunos de ETECs e FATECs: cadastro
@@ -154,46 +164,57 @@ background with a welcoming and friendly tone" id="img-menu">
 
         </section>
 
-        <section class="features" aria-label="Recursos principais">
-            <article class="feature-card">
+   <section class="features" aria-label="Recursos principais">
+  <article class="feature-card">
+    <div class="feature-content">
+      <h3>Controle Total</h3>
+      <div class="imgcardsesp">
+        <img src="/templates/images/Stuck at Home - Monitor.png" alt="">
+      </div>
+      <p class="txton">
+        Com o FoodPay, você tem o controle total das suas compras na cantina, acompanhando gastos em tempo real e sem preocupações com dinheiro físico
+      </p>
+    </div>
+  </article>
 
-                <div class="feature-content">
-                    <h3>Controle Total</h3>
-                    <p>Com o FoodPay, você tem o controle total das suas compras na cantina, acompanhando gastos em
-                        tempo real e sem preocupações com dinheiro físico</p>
-                </div>
-            </article>
+  <article class="feature-card">
+    <div class="feature-content">
+      <h3>Acesso pensado para Adm</h3>
+      <div class="imgcardsesp">
+        <img src="/templates/images/Stuck at Home - Stats and Graphs.png" alt="">
+      </div>
+      <p class="txton">
+        Para os gestores, a plataforma oferece relatórios inteligentes e uma gestão mais organizada.
+      </p>
+    </div>
+  </article>
 
-            <article class="feature-card">
+  <article class="feature-cardon">
+    <div class="feature-content">
+      <h3>Economia de Tempo</h3>
+      <div class="imgcardsespon">
+        <img src="/templates/images/clockk.png" id="clocky">
+      </div>
+      <p class="txton">
+        E o melhor: tudo isso gera economia de tempo para alunos, pais e equipe da cantina, tornando o processo mais rápido e eficiente.
+      </p>
+    </div>
+  </article>
+</section>
 
-                <div class="feature-content">
-                    <h3>Acesso pensado para Adm</h3>
-                    <p>Para os gestores, a plataforma oferece relatórios inteligentes e uma gestão mais organizada.</p>
-                </div>
-            </article>
 
-            <article class="feature-card">
 
-                <div class="feature-content">
-                    <h3>Economia de Tempo</h3>
-                    <p>E o melhor: tudo isso gera economia de tempo para alunos, pais e equipe da cantina, tornando o
-                        processo mais rápido e eficiente.</p>
-                </div>
-            </article>
+
+        <section class="imagemfim">
+            <img src="/templates/images/alunos.jpg" id="imgfim" alt="Imagem final">
         </section>
-
-
-
-        <div>
-            <img src="ter.jpg" id="imgfim" alt="Imagem final">
-        </div>
     </div>
 
 
     <!-- Rodapé -->
     <footer id="rodape">
         <div class="rodape-conteudo">
-            <img src="logo.png" alt="Logo FoodPay" class="rodape-logo">
+            <img src="/templates/images/logo.png" alt="Logo FoodPay" class="rodape-logo">
             <p>&copy; 2025 FoodPay. Todos os direitos reservados.</p>
             <div class="links-rodape">
                 <a href="#">Política de Privacidade</a>
@@ -201,9 +222,4 @@ background with a welcoming and friendly tone" id="img-menu">
                 <a href="#">Contato</a>
             </div>
         </div>
-    </footer>
-
-
-</body>
-
-</html>
+    </footer></body></html>
