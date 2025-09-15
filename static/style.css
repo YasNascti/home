@@ -1,13 +1,10 @@
-
-/* ========== Reset Global ========== */
+/* ========== RESET GLOBAL ========== */
 * {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe
- UI', Roboto, Oxygen, Ubuntu, Cantarell, ' Open Sans', ' Helvetica Neue',
- sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html,
@@ -18,7 +15,13 @@ body {
   font-family: "Sansation", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
 
+body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  min-height: 100vh;
 }
 
 body.dark-mode {
@@ -49,14 +52,7 @@ a {
   font-size: 1rem;
 }
 
-body {
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  min-height: 100vh;
-}
-
-/* ========== Cabeçalho / Navbar ========== */
+/* ========== CABEÇALHO / NAVBAR ========== */
 #navegacao {
   display: flex;
   justify-content: center;
@@ -159,15 +155,17 @@ a:hover {
   transform: scale(1.05);
 }
 
+/* ========== SEÇÃO PRINCIPAL ========== */
 .principal {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+
   max-width: 100%;
   width: 100%;
 }
+
 
 .first {
   display: flex;
@@ -177,24 +175,23 @@ a:hover {
 }
 
 #fpn {
-  width: 110vw;
-  height: 60vh;
+  width: 99vw;
+  height: 80vh;
   display: flex;
-
 }
 
+/* ========== SEGUNDA SEÇÃO ========== */
 .second {
-
   background-color: #fafafa;
   width: 100%;
 
 }
 
 .second-all {
+
   display: flex;
   flex-direction: row;
   padding: 50px 10%;
-  display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -269,11 +266,13 @@ a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* ========== TERCEIRA SEÇÃO / CARDS ========== */
 .features1 {
   flex-direction: row;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 260px;
 }
 
 .allcards-fat {
@@ -283,39 +282,193 @@ a:hover {
   justify-content: center;
   flex-direction: column;
   gap: 50px;
-
 }
 
-.phone img {
-  height: 1000px;
-
-
+/* CARD CELULAR */
+.cardcel {
+  width: 350px;
+  height: 700px;
+  background: black;
+  border-radius: 35px;
+  border: 2px solid rgb(40, 40, 40);
+  padding: 7px;
+  position: relative;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
 }
 
-.phone img {
-  max-width: 100%;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+.simcel {
+  height: 200px;
 }
 
+.card-int {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff, #fc3131, #fa9d9d);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  height: 100%;
+  border-radius: 25px;
+  transition: all 0.6s ease-out;
+  overflow: hidden;
+}
+
+.cardcel:hover .card-int {
+  background-position: 100% 100%;
+}
+
+/* Parte superior do celular */
+.top {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translate(50%, 0);
+  width: 35%;
+  height: 18px;
+  background-color: black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.speaker {
+  position: absolute;
+  top: 2px;
+  right: 50%;
+  transform: translate(50%, 0);
+  width: 40%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgb(20, 20, 20);
+}
+
+.camera {
+  position: absolute;
+  top: 6px;
+  right: 84%;
+  transform: translate(50%, 0);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.048);
+}
+
+.int {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: rgba(0, 0, 255, 0.212);
+}
+
+/* Botões laterais do celular */
+.btn1,
+.btn2,
+.btn3,
+.btn4 {
+  position: absolute;
+  width: 2px;
+  background-image: linear-gradient(to right, #111111, #222222, #333333, #464646, #595959);
+}
+
+.btn1 {
+  height: 45px;
+  top: 30%;
+  right: -4px;
+}
+
+.btn2,
+.btn3 {
+  transform: scale(-1);
+  left: -4px;
+  height: 30px;
+}
+
+.btn2 {
+  top: 26%;
+}
+
+.btn3 {
+  top: 36%;
+}
+
+/* Conteúdo do card */
+.hello {
+  display: flex;
+  flex-flow: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 5rem;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 35px;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.hidden {
+  display: block;
+  opacity: 0;
+  font-size: 1rem;
+  transition: all 0.3s ease-in;
+}
+
+.cardcel:hover .hidden {
+  opacity: 1;
+}
+
+.cardcel:hover .hello {
+  transform: translateY(-20px);
+}
+
+/* Cards extras */
 .cards-list {
   max-width: 420px;
-  padding: 1rem;
+  padding: 0.5rem;
+
   background-color: #fff;
+  height: 200px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.features1 {
+
+  margin: 70px 0 0 0;
 }
 
 .cardtitle {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 2px;
   align-items: center;
   margin: 2px;
 }
 
 .cadasicon {
-  width: 50px;
-  margin: 25px 5px;
+  width: 25px;
+  margin: 10px 5px;
+}
+
+.imgcards {
+  width: 500px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.txtcards {
+  width: 500px;
+  text-align: center;
+  padding: 50px;
 }
 
 .title {
@@ -326,18 +479,16 @@ a:hover {
 
 .description {
   margin-top: 1rem;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   color: rgb(75 85 99);
 }
-
 
 .actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
-  -moz-column-gap: 1rem;
   column-gap: 1rem;
   flex-shrink: 0;
 }
@@ -346,7 +497,6 @@ a:hover {
   font-size: 0.75rem;
   line-height: 1rem;
   color: rgb(31 41 55);
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
@@ -369,10 +519,7 @@ a:hover {
   font-weight: 500;
   border-radius: 0.5rem;
   color: #fff;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
+  padding: 0.625rem 1rem;
   border: none;
   transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -386,60 +533,63 @@ a:hover {
   outline-offset: 2px;
 }
 
-
-
-
-/* ========== SEÇÃO FOURTH (BENEFÍCIOS) - MODIFICADA PARA ALINHAMENTO
-HORIZONTAL ========== */
-
+/* ========== SEÇÃO FOURTH (BENEFÍCIOS) ========== */
 .features {
   display: flex;
+  flex-direction: row;
+  /* 🔑 coloca os cards lado a lado */
   justify-content: center;
-  align-items: stretch;
-  /* Faz os itens terem a mesma altura */
-  gap: 60px;
-  /* Reduzi o gap para melhor responsividade */
-  padding: 80px 20px;
-  background-color: #2e9a60;
-  /* substitui var(--primary-bg) por branco (ou outra cor que você quiser) */
+  align-items: flex-start;
   flex-wrap: wrap;
+  /* 🔑 quebra em telas menores */
+  gap: 60px;
+  margin: 80px 0 0 0;
+  padding: 90px 20px;
+  background-color: #fafafa;
   width: 100%;
 }
 
-.feature-card {
+.feature-card,
+.feature-cardon {
   display: flex;
   flex-direction: column;
+  /* 🔑 garante imagem em cima, texto embaixo */
   align-items: center;
   text-align: center;
   max-width: 350px;
+  /* 🔑 diminui a largura para caber os 3 cards em linha */
   width: 100%;
-  gap: 20px;
   padding: 30px 25px;
-  background-color: #2e9a60;
-  /* antes era var(--card-bg) */
+  background-color: #fafafa;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
   transition: all 0.3s ease;
-  /* antes era var(--transition) */
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+.feature-card {
+  height: 416px;
 }
 
-.feature-img {
-  width: 800px;
-  height: 80px;
-  object-fit: contain;
+
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .feature-content h3 {
   font-size: 1.4rem;
-  margin-bottom: 15px;
-  color: #fffefe;
-  /* antes era var(--heading-color) */
+  margin-bottom: 10px;
+  color: black;
+}
+
+.feature-content img {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .feature-content p {
@@ -447,39 +597,29 @@ HORIZONTAL ========== */
   font-family: "Sansation", sans-serif;
   font-weight: 400;
   text-align: justify;
-
-  font-style: normal;
-
-
-  color: #ffffff;
-  /* antes era var(--text-color) */
+  color: black;
   line-height: 1.6;
 }
+
+#clocky {
+  max-width: 150px;
+}
+
 
 .imagemfim {
   max-width: 100%;
   height: 100vh;
   display: flex;
-  justify-content:flex-end ;
+  justify-content: flex-end;
   align-items: flex-end;
 }
 
 #imgfim {
   width: 100vw;
-  height: 70vh;
-
-
-
+  height: 90vh;
 }
 
-
-
-
-
-
-
-
-/* RODAPÉ */
+/* ========== RODAPÉ ========== */
 #rodape {
   background-color: #2e9a60;
   color: #fff;
@@ -508,25 +648,243 @@ HORIZONTAL ========== */
   text-decoration: underline;
 }
 
-/* Media Query para responsividade em telas menores */
-@media (max-width: 768px) {
-  .list-fourth {
-    flex-direction: column;
-    /* Em telas pequenas, volta a ser vertical */
-    gap: 40px;
-  }
+  
+         
+        /* Dispositivos extra pequenos (phones, 600px e abaixo) */
+        @media only screen and (max-width: 600px) {
+            #navegacao {
+                height: 70px;
+                padding: 0 10px;
+            }
+            
+            #linhadochuma {
+                height: 70px;
+            }
+            
+            #logo {
+                width: 5rem;
+                left: 15px;
+                top: 10px;
+            }
+            
+            .button-container {
+                gap: 12px;
+            }
+            
+            .button {
+                width: 36px;
+                height: 36px;
+            }
+            
+            #user-icon {
+                right: 10px;
+                width: 42px;
+                height: 42px;
+            }
+            
+            #user-icon img {
+                width: 42px;
+                height: 42px;
+            }
+            
+            #fpn {
+                height: 50vh;
+            }
+            
+            .second-all {
+                flex-direction: column;
+                padding: 30px 5%;
+            }
+            
+            #spn {
+                width: 60%;
+                margin: 20px 0;
+            }
+            
+            #thf1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            
+            #sec-text {
+                width: 100%;
+                font-size: 1rem;
+                line-height: 1.6rem;
+                text-align: center;
+            }
+            
+            .features1 {
+                flex-direction: column;
+                gap: 40px;
+                margin: 40px 0 0 0;
+            }
+            
+            .cardcel {
+                width: 300px;
+                height: 600px;
+            }
+            
+            .hello {
+                font-size: 3.5rem;
+            }
+            
+            .cards-list {
+                max-width: 320px;
+                height: auto;
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 1.5rem;
+            }
+            
+            .description {
+                font-size: 1.1rem;
+                line-height: 1.6rem;
+            }
+            
+            .features {
+                flex-direction: column;
+                gap: 30px;
+                padding: 40px 20px;
+                margin: 40px 0 0 0;
+            }
+            
+            .feature-card, .feature-cardon {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .feature-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .feature-content img {
+                max-width: 150px;
+            }
+            
+            .imagemfim {
+                height: 50vh;
+            }
+            
+            #imgfim {
+                height: 50vh;
+            }
+        }
 
-  .second-all {
-    flex-direction: column;
-    margin: 20px;
-  }
+        /* Dispositivos pequenos (phones em landscape, 600px a 768px) */
+        @media only screen and (min-width: 601px) and (max-width: 768px) {
+            #logo {
+                width: 6rem;
+            }
+            
+            .second-all {
+                padding: 40px 5%;
+            }
+            
+            #spn {
+                width: 30%;
+                margin: 30px;
+            }
+            
+            #sec-text {
+                width: 350px;
+            }
+            
+            .features1 {
+                flex-direction: column;
+                gap: 60px;
+            }
+            
+            .features {
+                flex-direction: column;
+                gap: 40px;
+                padding: 60px 20px;
+            }
+            
+            .feature-card, .feature-cardon {
+                max-width: 80%;
+            }
+        }
 
-  #spn {
-    width: 50%;
-    margin: 20px auto;
-  }
+        /* Dispositivos médios (tablets, 768px a 992px) */
+        @media only screen and (min-width: 769px) and (max-width: 992px) {
+            .second-all {
+                padding: 50px 5%;
+            }
+            
+            #spn {
+                width: 25%;
+                margin: 40px;
+            }
+            
+            .features1 {
+                gap: 120px;
+            }
+            
+            .features {
+                gap: 40px;
+            }
+            
+            .feature-card, .feature-cardon {
+                max-width: 280px;
+            }
+        }
 
-  #sec-text {
-    width: 100%;
-  }
-}
+        /* Dispositivos grandes (desktops, 992px a 1200px) */
+        @media only screen and (min-width: 993px) and (max-width: 1200px) {
+            .features1 {
+                gap: 180px;
+            }
+            
+            .features {
+                gap: 50px;
+            }
+            
+            .feature-card, .feature-cardon {
+                max-width: 300px;
+            }
+        }
+
+        /* Dispositivos extra grandes (desktops grandes, 1200px e acima) */
+        @media only screen and (min-width: 1201px) {
+            .features1 {
+                gap: 260px;
+            }
+            
+            .features {
+                gap: 60px;
+            }
+            
+            .feature-card, .feature-cardon {
+                max-width: 350px;
+            }
+        }
+
+        /* Ajustes para orientação paisagem em dispositivos móveis */
+        @media only screen and (max-height: 500px) and (orientation: landscape) {
+            #fpn {
+                height: 50vh;
+                width: 20vw;
+            }
+            
+            .cardcel {
+                height: 500px;
+                width: 250px;
+            }
+            
+            .hello {
+                font-size: 3rem;
+            }
+        }
+
+        /* Ajustes para telas com alta densidade de pixels */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .button {
+                transform: scale(0.9);
+            }
+            
+            .button:hover {
+                transform: scale(1);
+            }
+        }
